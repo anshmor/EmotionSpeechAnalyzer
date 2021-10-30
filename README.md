@@ -1,0 +1,2 @@
+# EmotionSpeechAnalyzer
+Emotion Speech Analyzer
