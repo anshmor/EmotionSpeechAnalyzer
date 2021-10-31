@@ -1,4 +1,5 @@
 const express = require('express');
+const { read } = require('fs');
 
 // create express app
 const app = express();
@@ -16,4 +17,5 @@ app.get('/', (req, res) => {
 
 app.use( (req, res) => {
     //res.status(404).sendFile('.views/404.html', {root: __dirname})
+    res.render('404');
 })
