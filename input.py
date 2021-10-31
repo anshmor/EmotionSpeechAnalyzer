@@ -4,7 +4,6 @@ import numpy as np
 import librosa # to extract speech features
 import glob
 import os
-import pickle # to save model after training
 
 def extract_feature(file_name, **kwargs):
     """
@@ -46,7 +45,7 @@ def extract_feature(file_name, **kwargs):
             result = np.hstack((result, tonnetz))
     return result
 
-model = pickle.load(open("result/mlp_classifier.model", "rb"))
+model = pickle.load(open("mlp_classifier.model", "rb"))
 print("Please talk")
 filename = "test.wav"
 # record the file (start talking)
